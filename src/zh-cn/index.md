@@ -2,239 +2,168 @@
 # 语言 （可选）
 lang: zh-cn
 # 网页关键词和描述
-keywords: 简历主题,Hexo主题,简历模板
-description: 这是一个在线简历模板（Hexo博客主题）。
+keywords: 刘天翼的简历
+description: Hi, I'm TianYi Liu 👋
 # 简历标题
-resume_title: Jon Snow's Resume
+resume_title: 刘天翼的简历
 # 应聘者姓名
-name: Jon Snow
-avatar: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png
+name: 刘天翼
+avatar: https://s2.loli.net/2023/10/06/c4D1jR6MfQbzhUp.png
 # 联系方式
 contact:
   - icon: fas fa-globe-asia
-    text: https://resume.js.org
-    url: https://resume.js.org/zh-cn/
+    text: 我的主页
+    url: https://bento.me/moyii
   # 邮箱
   - icon: fas fa-envelope
-    text: your email
-    url:
-  # 电话号码
-  - icon: fas fa-phone-alt
-    text: 1xxxxxxxxxx
-    url: tel:10086
+    text: akeemkeebler495@gmail.com
+    url: akeemkeebler495@gmail.com
+  # 教育
+  - icon: fas fa-user-graduate
+    text: 本科-软件工程
+    url: 
 # PDF下载链接
 download:
-  title: 下载本站源码
+  title: 下载简历
   icon: fas fa-download fa-fw
-  url: https://github.com/xaoxuu/resume-docs
+  url: https://tmp.link/f/6521545d545bc
+
 ---
 
 {% raw %}
+
 <center>
 <a href='/'>English</a> | <a href='/zh-cn/'>简体中文</a>
 </center>
+
 {% endraw %}
 
+-------------------------------
+
+联系：(+86）17771429857
+
+邮箱：[akeemkeebler495@gmail.com](mailto:akeemkeebler495@gmail.com)
+
+主页：[Homepage](https://bento.me/moyii)
+
+教育：本科-软件工程
+
+## 关于我
+
+---
+
+Bonjour! 我是一名 C/C++ 工程师，具备 1.5 年热门项目 web 后端服务器开发上线经验，有着丰富的技术栈和属于一套自己完善的工作流，追求效率和技术，热爱探索未知领域，试玩过国内外、当下热门操作系统各类应用程序，对用户需求以及产品研发有着全景视角。对外开放，爱交流，拥抱新技术，乐于挑战棘手复杂问题。致力寻找志同道合的你。您可以在这找到我的一些经验和技能树以及联系我的信息，期待能见到你。
+
+### 技能树
+
+![https://s2.loli.net/2023/10/06/8qiG6LCdcFu2Rnh.png](https://s2.loli.net/2023/10/06/8qiG6LCdcFu2Rnh.png)
+
+- C++11, STL , 具备良好的 OOD 面向对象设计思想。RAII 思想及三种智能指针的使用，C++ 内存池底层实现，多态的机制底层实现以及内存布局，右值与完美转发。熟练灵活在 Linux 操作系统上进行各种项目的开发，主力编辑器 vim 以及下一代 vim 编辑器 neovim。GCC / G++ / GDB 开发、编译、调试。进程/线程、线程池，线程池的互斥与同步
+- 扎实的网络理论基础，常见的数据结构与算法。TCP拥塞控制算法Cubic、以及综合性能较优越的BBR拥塞控制算法。熟悉 Socket 网络编程，多路 IO 复用 select、poll、epoll。理解 ICMP、ARP、NAT、BGP、Shadowsocks、TCP/IP、HTTP/HTTPS、以及端到端加密协议 TLS/SSL、DNS协议。Nginx 的配置，进行网络反向代理、负载均衡、发现服务。以及对 Nginx 进一步封装 npm 的运用。
+- Docker 容器技术，Docker compose 自动化管理，Dockerfile 的编写及镜像构建，Docker 命令。 MySQL ，Redis分布式事务及缓存穿透，缓存雪崩的解决方案。Git 新协作方式版本控制系统。
+- 公司服务器的规划、调试优化、日常监控、故障处理、数据备份、日志分析、性能瓶颈分析等工作。并负责线上服务器实时维护、提高系统的可用率及可维护性，良好的文档撰写能力。
+- 了解前端所有热门框架以及延申的框架及组件，基本掌握 HTML 、CSS ，以及知道后端 Node.js ，对后端到前端的技术原理有全面的认识，熟悉网站开发流程，能够独立搭建完整的网站。
+
+## 项目经验
+
+---
+
+### AIGC 高性能 web 服务器开发
+
+*~ 2022 年 8 月 - 至今*
+
+- 项目介绍
+  AI 与绘图融合，生成式 AI 在当下用户量日益猛增，对大量用户的绘图请求要保证快速响应，和高并发同时返回给用户绘制好的 AI 图。所以采用 C++11 特性利用Epoll与线程池实现 Reactor 高并发模型实现高性能Web服务器。
+- 技术栈
+  TCP、HTTP 协议，多进程多线程，IO，锁，通信，C++11 语法，编程规范，Linux环境下各种工具的使用，版本控制 Git，Makefile 和 CMakeLists 文件的编写。
+- 技术细节
+  - 利用Epoll与线程池实现Reactor高并发模型
+  - 利用状态机与正则实现HTTP请求报文解析，可同时处理GET与POST请求
+  - 用vector容器封装char，实现了一个可自动扩容的缓冲区
+  - 基于epoll_wait实现定时功能，关闭超时的非活动连接，并用小根堆作为容器管理定时器
+  - 使用多线程充分利用多核CPU，并使用线程池避免线程频繁创建销毁的开销
+  - 利用单例模式实现连接MySQL的数据库连接池，减少数据库连接建立与关闭的开销，实现了用户注册登录功能
+  - 利用单例模式与阻塞队列实现异步日志系统，记录服务器运行状态
+  - 能够处理前端发送的multi/form-data类型的post请求，实现了文件上传功能
+  - 通过jsoncpp生成json数据，向前端发送文件列表，实现文件展示与下载
+
+---
+
+### AIGC 内部用户作品存储网盘
+
+*~2022 年 8 月 - 至今*
+
+- 项目介绍
+  - 客户端通过sockfd与服务器通信，服务器通过sockfd进行连接新的客户端，用accept到的newfd与客户端进行通信； 主线程负责向子线程分配任务，子线程负责处理任务并于客户端通信； 简单命令主线程直接执行，puts 和 gets 命令交给子线程执行。
+- 技术细节
+  - 用户登陆与密码验证 类似/etc/shadow文件下的盐值加密，使用crypt函数进行加密，将用户账号，密码以及加密后的数据存放在数据库中； 盐值salt(随机生成)的8个字符，密码匹配方式是服务器根据客户端的用户名找到其Salt，并将Salt发送回客户端，客户端进行crypt加密后再发送给服务器进行匹配，其中需要注意客户端是没有权限访问数据库的 User | Password | Salt | Cipher
+  - 记录日志信息：包括客户端的请求信息，客户端连接时间，客户端的操作记录以及操作时间，并将信息都存放在数据库中； User | Operation | time
+  - 文件的断点续传：客户端gets过程中如果断开，再次gets时，从断点开始传输 具体实现：客户端如果有要接收的文件file并已经下载了1000字节，则向服务器发送 gets file 1000, 服务器直接从偏移1000字节的位置开始传送，客户端也偏移1000字节开始接收
+  - 使用token令牌
+  - 连接上的客户端如果30s没有相应，那么关闭描述符
+
+---
+
+### 边缘搜索引擎
+
+*~2022 年 8 月 - 至今*
+
+- 项目介绍
+  - 何为边缘搜索引擎，就是当你百度搜索的时候，给你呈现的结果，恰恰就是我们反对给你的结果。我们会尽量给出不在前排的结果，但是质量又超过前排的搜索结果，那些散落在世界互联网边缘的角落，搜罗着被遗忘的奥秘，它不被常规搜索引擎所束缚，成为探索边缘的理念化身，让边缘引擎带你穿越，并揭示出那些隐藏而迷人的奇迹所在。
+- 技术栈
+  - 爬虫框架：Scrapy
+  - 后端服务：C++
+  - 前端服务：VueJS
+  - 部署：Docker
+- 技术细节
+  - 爬虫策略的选取，深度优先还是广度优先？通过某种方式（如哈希-布隆过滤器）保存已经抓取过的URL，避免重复抓取，友好性工作，遵守ROBOT协议。
+  - 网页去重，对网页文章进行清洗，去除杂质，提取最小有效关键字。再获取Topk，通过对比不同网页的 Topk 来判断两个网页是否高度相似。
+  - 网页质量的高低？一个重要指标，利用来自谷歌很符合人类社交社会的 PageRank 算法
+  - 网页去重 技术亮点: 开源库cppjieba分词，set停词集合，TopK算法(判断网页重复)
+  - 建立倒排索引 技术亮点：unordered_map倒排哈希表，TF-IDF算法(计算权重)——重点选取关键字的权重，也就是IDF。如何对权重做到可比性，误差小，利用欧几里得范数对计算IDF过后的数据进行归一化。
+
+## 工作经历
+
+---
+
+**大连译和网络科技有限公司**  		    `
+
+*`2022 年 4 月 - 2023 年 10 月`*
+
+## 教育及其他
+
+---
+
+**武汉传媒学院 -软件工程**
+
+*`2016 年 9 月 - 2021 年 6 月`*
+
+**语言：英语**
+
+无障碍阅读计算机领域技术文档，能适应纯英语工作环境。
 
 
-## <i class="fas fa-flag"></i> 开始使用
 
-由于本主题与普通 Hexo 主题有较大区别，建议请直接下载本站的源码，参考源码进行改写。
+## 自我评价
 
-- 本站源码：https://github.com/xaoxuu/resume-docs
-- 主题源码：https://github.com/xaoxuu/hexo-theme-resume
+---
 
-也可以创建全新的博客，通过 `npm` 命令安装：
-
-```bash
-npm i hexo-theme-resume
-```
-
-然后删除多余的依赖包（重要），打开 `package.json` 复制并全部替换为以下内容：
-
-```json
-{
-  "name": "hexo-site",
-  "private": true,
-  "hexo": {
-    "version": "5.0.0"
-  },
-  "scripts": {
-    "start": "hexo server",
-    "build": "node pre-deploy.js && hexo clean && hexo generate",
-    "deploy": "npm run build && hexo deploy"
-  },
-  "engines": {
-    "node": ">=8.9.0"
-  },
-  "dependencies": {
-    "hexo": "^5.0.0",
-    "hexo-all-minifier": "^0.5.3",
-    "hexo-autonofollow": "^1.0.1",
-    "hexo-deployer-git": "^2.1.0",
-    "hexo-fs": "^3.1.0",
-    "hexo-lazyload-image": "^1.0.9",
-    "hexo-offline": "^1.0.0",
-    "hexo-renderer-ejs": "^1.0.0",
-    "hexo-renderer-marked": "^3.0.0",
-    "hexo-renderer-stylus": "^1.1.0",
-    "hexo-server": "^1.0.0"
-  }
-}
-```
-
-然后输入 `npm i` 安装依赖包。
-
-## <i class="fas fa-user-graduate"></i> 教育背景
-
-**XX大学 X学院 X系 X专业 X年毕业**
-
-
-## <i class="fas fa-user-tie"></i> 工作经验
-
-
-#### 2000年 ~ 至今：XX公司
-
-- 主要负责XXX
-- 也负责XXX
-
-
-#### 1900年 ~ 2000年：XX公司
-
-- 主要负责XXX
-- 也负责XXX
-
-#### 1800年 ~ 1900年：XX公司
-
-- 主要负责XXX
-- 也负责XXX
-
-
-## <i class="fas fa-award"></i> 精选项目
-
-
-{% raw %}
-<btns rounded>
-<a href='https://apps.apple.com/cn/app/heart-mate-pro-hrm-utility/id1463348922?ls=1'>
-  <img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/heartmate/icon.png'>
-  心率管家
-</a>
-<a href='https://apps.apple.com/cn/app/c%E5%85%BB%E8%80%81/id1458315594'>
-  <img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/het-cyanglao/icon.png'>
-  C养老
-</a>
-<a href='https://apps.apple.com/cn/app/c-life%E5%85%BB%E8%80%81/id1393937890'>
-  <img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/het-clife/icon.png'>
-  C-Life养老
-</a>
-<a href='https://apps.apple.com/cn/app/linksmart/id1109303355'>
-  <img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/ht-linksmart/icon.png'>
-  LinkSmart
-</a>
-<a href='https://apps.apple.com/cn/app/hitfit/id1207738581'>
-  <img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/ht-hitfit/icon.png'>
-  HitFit
-</a>
-<a href='https://apps.apple.com/cn/app/%E8%85%95%E8%83%BD%E5%8A%A9%E6%89%8B/id1138242219'>
-  <img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/ht-fiyta/icon.png'>
-  飞亚达腕能助手
-</a>
-</btns><br>
-{% endraw %}
-
-
-### A项目
-
-#### 2000/01 ~ 2019/01：于XX公司开发，团队项目，维护至今
-
-啦啦啦
-
-### B项目
-
-#### 1900/01 ~ 2000/01：于XX公司开发
-
-啦啦啦
-
-### C项目
-
-#### 1800/01 ~ 1900/01：于XX公司开发
-
-啦啦啦
-
-## <i class="fab fa-github"></i> 开源贡献
-
-
-### Volantis
-
-#### 2017 ~ 至今，一个简约的卡片式Hexo博客主题
-
-- 完全自由的模块化、易于定制化设计
-- 移动端优化
-- 源码：https://github.com/xaoxuu/hexo-theme-volantis
-- 官网：https://volantis.js.org/
-
-### ProHUD
-
-#### 2019/08 ~ 至今，易于定制、接口简单的HUD库
-
-- 使用Swift5编写。
-- 包含顶部通知横幅、弹窗、底部操作表三种使用场景的UI控件。
-- 易于配置UI从而满足公司各业务线的UI要求，接口调用简单明了。
-- 源码：https://github.com/xaoxuu/ProHUD
-
-<fancybox>
-<img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot01.png'>
-<img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot02.png'>
-<img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot03.png'>
-<img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot04.png'>
-<img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot05.png'>
-<img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot06.png'>
-<img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot07.png'>
-<img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot08.png'>
-<img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot09.png'>
-<img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/screenshot10.png'>
-</fancybox>
-
-## <i class="fas fa-phone-alt"></i> 与我联系
-
-目前状态为：在职，考虑换工作，100年内可到岗。
-
-<i class="fas fa-envelope fa-fw"></i> your email
-<i class="fas fa-phone-alt fa-fw"></i> 1xxxxxxxxxx
-
-
-## 主题配置
-
-```yaml
-cdn:
-  # These base libraries cannot be deleted
-  jquery: https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js
-  vue: https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js
-  # When these CDN resources are deleted, local resources are loaded.
-  common: https://cdn.jsdelivr.net/gh/xaoxuu/hexo-theme-resume@1.0.0/source/js/common.js
-  escape: https://cdn.jsdelivr.net/gh/xaoxuu/hexo-theme-resume@1.0.0/source/js/css.escape.js
-  smooth_scroll: https://cdn.jsdelivr.net/gh/xaoxuu/hexo-theme-resume@1.0.0/source/js/smooth-scroll.min.js
-  css: https://cdn.jsdelivr.net/gh/xaoxuu/hexo-theme-resume@1.0.0/source/css/style.min.css
-  # Optional plug-in: image zoom
-  fancybox:
-    css: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
-    js: https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
-
-# robots meta tag
-robots: noindex,nofollow
-
-# the footer of your site
-copyright: '[Copyright © 2017-2020 Mr. X](https://xaoxuu.com)'
-```
+- 活跃在 Reddit 和 Discord 等社区交流技术问题和经验以及帮助他人解答
+- 对技术有强烈兴趣，学习能力强、技术视野广阔，乐于不断学习新知识；
+- 学习一门新技术的时候，不要觉得难，时时刻刻想着它的诞生肯定是极大提高了我们之前的生产力，就比如说由 OpenAI 引领的 GPT 热潮，由此到中国国内应运而生的上百种富有名字中国气息的 GPT 和 AIGC。有人问 AI 会取代人类吗？答案是不会的，但是会用 AI 的人会取代不用 AI 的人。在计算机领域应该不断打破边界，不一定追求新的技术但是至少要追求新的知识，多看多想多练，才能在技术层面有新的认识，在产品方面得到创新，或在多股浪潮中仍然独树一帜，迸发出新的趋势。
+- 那么在不断开拓新的知识的同时，作为互联网工作者、工程师，绕不过去的点，和核心的纽带就是知识管理。在信息时代爆棚的今天，如何冲出洪流，时刻保持自己的见解，这可能就需要一种新的信息源获取方式，和一个抽象的对信息加工的知识管理系统，来构建自己的知识库，这不仅能使已经学过的知识得到归档和快速检索形成第二大脑，促使技术的沉淀，最重要的是还能产出新的内容，写出的文章，分享创造价值。就像搜索引擎，你只有自己一套独特的爬虫策略，然后采集高质量的信息源，获取大量的网页库，当用户需要的时候，你才能分享优雅高质量的信息。打造数字花园与溪流是一件美妙的事。在前端千姿百态的框架面前，需要学到太多，后端也是不甘示弱也需要不断持续学习。**唯一不变的就是变化**
+- 在工作之外，我还喜欢：文化艺术、欣赏前端优秀页面设计、参考前端大佬们框架技术选型、iOS平台技术探索、时尚领域以及短视频创作。若有相同的爱好，欢迎页面顶部联系。
 
 ## 评论
 
 {% raw %}
+
 <script src="https://utteranc.es/client.js"
-        repo="xaoxuu/hexo-theme-resume"
+        repo="https://bento.me/moyii"
         issue-number="18"
         theme="github-light"
         crossorigin="anonymous"
         async>
 </script>
+
 {% endraw %}
